@@ -1,2 +1,2 @@
 # Art-Classifier
-Classifies Art
+Distinguishes paintings by nationality and genre
