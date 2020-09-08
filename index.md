@@ -9,10 +9,16 @@ Here we detail our approach towards the construction of our model, including the
 In our model we used the following datasets:
 
 Keras
+
 Tensorflow
+
 Pandas
+
 Numpy
+
 Seaborn
+
+![Libraries Used](Image)
 
 Keras and Tensorflow are intertwined, two very popular libraries that contain the framework for the layers which made up our neural network.
 Pandas is a data manipulation library we used to assign labels to the images within our dataset
@@ -27,19 +33,30 @@ We sorted the image dataset by hand into their respective nationalities and genr
 
 Using the os.listdir command, we were able to check each label and make sure that they were assigned correctly.
 
+![Code showing os.listdir](Image)
+
 A fundamental problem of many datasets is normalization, especially when some labels within a dataset are present at a much higher frequency than others. We accounted for this using class weights. A nationality which includes many paintings will have lower class weights assigned to each painting, and vice versa for say, genres with a low amount of paintings.
+
+![class weights shown](Image)
 
 ### Image Augmentation
 
 After processing the data, we wanted to introduce more pictures for the model to interpret, but without the hassle of scraping websites for painting data. We instead visually augmented the pictures we already had in various ways, including zooming in on a specific portion, mirroring, and even rotating the image. This massively increases the diversity of our dataset, and thus helps to prevent overfitting. 
 
+![augmentation example](Image)
+
 ### Resnet50
 
 The model used for this project was a pre-trained neural network called Res-Net 50, which had been previously trained over 14 million images from the dataset Imagenet.. This allows for the weights to be more easily transferred to paintings due to the concept of transfer learning. It also results in massively reduced computational times, as the model can pick up patterns much quicker than a fresh model, due to having encountered those features before as part of its Imagenet training. 
 
+![res-net 50 layer overview](Image)
+
 ### Model Parameters
 
-In a neural network, the outputs are typically a list of numbers that must be converted to percentages using an activation function. There are two main activation functions in deep learning, Softmax and Sigmoid, both of which are representations of logistic regression. The difference lies in that Softmax is generalized to multiple dimensions, which usually makes it ideal for taking multiple inputs and spitting out a single output. However, we found that changing our activation function to sigmoid significantly increased validation accuracy as well decreasing loss by a significant amount. This may be due to the fact that probabilities of a label within each node do not necessarily have to add up to one when using the sigmoid equation, meaning that each label is independent of each other. This allows for each label to 
+In a neural network, the outputs are typically a list of numbers that must be converted to percentages using an activation function. There are two main activation functions in deep learning, Softmax and Sigmoid, both of which are representations of logistic regression. The difference lies in that Softmax is generalized to multiple dimensions, which usually makes it ideal for taking multiple inputs and spitting out a single output. However, we found that changing our activation function to sigmoid significantly increased validation accuracy as well decreasing loss by a significant amount. This may be due to the fact that probabilities of a label within each node do not necessarily have to add up to one when using the sigmoid equation, meaning that each label is independent of each other. 
+
+![sigmoid equation and graph](Image)
+![softmax equation and graph](Image)
 
 # Results
 
