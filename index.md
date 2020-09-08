@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## PHYS250: Machine Learning
 
-# Heading 1
+# Approach
 
 ### Heading 3
 
