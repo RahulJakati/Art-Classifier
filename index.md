@@ -9,14 +9,24 @@ Here we detail our approach towards the construction of our model, including the
 In our model we used the following datasets:
 
 - [Keras](https://keras.io/ "Keras")
+
+
 ![Keras](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Keras.png)
 - [Tensorflow](https://www.tensorflow.org/ "Tensorflow")
+
+
 ![Tensorflow](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Tensorflow.png)
 - [Pandas](https://pandas.pydata.org/ "Pandas")
+
+
 ![Pandas](https://github.com/RahulJakati/Art-Classifier/blob/master/Images/Pandas.png?raw=true)
 - [NumPy](https://numpy.org/ "NumPy")
+
+
 ![NumPy](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Numpy.png)
 - [Seaborn](https://seaborn.pydata.org/ "Seaborn")
+
+
 ![Seaborn](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Seaborn.png)
 
 - Keras and Tensorflow are intertwined, two very popular libraries that contain the framework for the layers which made up our neural network.
