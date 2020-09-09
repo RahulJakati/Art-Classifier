@@ -97,15 +97,15 @@ Overfitting is when a network finds details in an image set that don’t necessa
 ### Confusion Matrices
 A confusion matrix shows how “confused” the computer gets between different labels. The bottom of the matrix shows the labels that the computer guessed and the left side shows the actual labels. The number in each square of the matrix where the two labels (the guess and the actual answer) intersect is the recall percentage of those labels.
 
-![Calculating the recall percentage](equation)
+![Calculating the Recall Percentage](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Recall%20Percentage.PNG)
 
 One thing to take note of is that the recall percentages in a row do not have to add up to 100%. 
 
-![Genre Confusion Matrix](matrix)
+![Genre Confusion Matrix](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Genre_CM.png)
 
 For our genre classification, the network did the best on the northern renaissance style of art. We are not quite sure why northern renaissance is the most easily selected from the dataset. Another very intriguing thing is that cubism was often confused for post-impressionism. Although cubism is an extension of post-impressionism, humans tend to see the geometric nature of cubism as very distinct and unique out of all of the genres. It is very odd that the network did not pick up on the shape of cubism but was able to aptly identify the intricacies of northern renaissance art. However, there is one genre in which the computer significantly underperformed: primitivism. This is most likely due to that primitivism is very similar to several other genres including impressionism, post-impressionism, expressionism, surrealism and high renaissance. It is almost a mixture of all of those genres and thus very difficult to distinguish on its own. 
 
-![Nationality Confusion Matrix](matrix)
+![Nationality Confusion Matrix](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Nationality_CM.png)
 
 For our nationality classification, the network most easily identified German paintings. This could be because most of the German images we had in our dataset were very distinct and this allowed the computer to pick up on the unique nature of how these Germans painted. The very intriguing part of this matrix is that the network confused Mexican art for Italian and Dutch art. We are not really sure as to why the computer decided that Mexican art was close to these two nationalities, but we think it may have to do with the fact that many of the Italian renaissance paintings and some Dutch paintings were murals and a fair amount of the Mexican paintings were also murals. 
 
