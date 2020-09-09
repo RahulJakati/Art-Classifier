@@ -3,6 +3,8 @@
 
 # Introduction
 
+![Alt Text](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Rhone.png)
+
 "Wow, what a fine piece of impressionism!" You glance nervously at your watch, wondering how your friend convinced you to come to the art gallery. You have no idea how to tell the difference between a piece of surrealism and romanticism, much less post-impressionism! Enter the machine learning project Alex and I have been working on for the past week. We adapted a pre-trained neural network(s) to distuinguish paintings by nationality and genre. 
 
 As a general overview of this post
