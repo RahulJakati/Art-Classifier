@@ -160,6 +160,8 @@ We plan to combine the two networks we have made into one. We want to assign two
 - Introducing more genres/nationalities
 This will increase the versatility of the dataset. With more categories like Abstract Impressionism and Australian paintings, this network could prove to be more useful in more situations. 
 
+![Pollock](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Pollock.jpg "Abstract-Expressionism")
+
 - Getting a bigger dataset to reduce the problems with overfitting
 Having more data is not guaranteed to solve our problem with overfitting, but it may help to relax the issue. Having a roughly equal amount of paintings in each genre/nationality will allow the computer to weigh all of them equally and not look into certain images more. This should reduce the issues we had with overfitting.
 
