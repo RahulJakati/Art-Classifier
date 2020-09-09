@@ -167,7 +167,7 @@ Having more data is not guaranteed to solve our problem with overfitting, but it
 
 # Acknowledgements
 
-We would first like to thank Supratim Haldar, whose Kaggle Notebook called DeepArtist was invaluable in helping us make our model, and helped teach us how many of the concepts behind many of the libraries he used with his helpful commentary on his notebook. We would also like to thank the website LearnDataScience, whose article on multi-label classification was invaluable in teaching us how it worked and the principles behind it. 
+We would first like to thank Supratim Haldar, whose Kaggle Notebook called DeepArtist was invaluable in helping us make our model, and helped teach us how many of the concepts behind many of the libraries he used with his helpful commentary on his notebook. We would also like to thank the website LearnDataScience, whose article on multi-label classification was invaluable in teaching us how it worked and the principles behind it. Finally, we'd like to thank Donald Smith, for guiding us along the process the entire way.
 
 A list of the sources we used: [Sources](https://docs.google.com/document/d/1DZ78x_VCgQT_qd0ejAAius1w642fedpDFS91xKLSI5k/edit?usp=sharing)
 
