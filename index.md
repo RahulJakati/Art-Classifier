@@ -82,9 +82,9 @@ Accuracy is a measure of how many correct guesses the computer has in percent. I
 
 Our image dataset was split into several different chunks, the training set and the validation set, we will have two different accuracies and losses for each network we made. The training set would be fed to the computer so that it could teach itself to find the differences between genres and nationalities. Afterwards, the computer would test itself on the validation set to confirm whether it was being correctly trained. This process would repeat, in our case, for about 35 epochs. As the network saw the training images while trying to learn off of them, the training accuracy should be higher than the validation accuracy and the training loss lower than the validation loss.  
 
-![Genre Accuracy and Loss](graph)
+![Genre Accuracy and Loss](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Genre_Loss_Graph.png)
 
-![Nationality Accuracy and Loss](graph)
+![Nationality Accuracy and Loss](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Genre%20Graphs.png)
 
 It is easily discernible that the training accuracy improved to around 95% and validation accuracy to 90% for both models. The losses also decreased significantly for both sets. 
 
@@ -115,11 +115,11 @@ Overall, these classification matrices seem to confirm one thing, that our netwo
 
 We took some images from the training and validation sets that the network had previously seen to first test the network. This would give us a baseline to see whether the computer had actually learned something or was not as good as we thought it was. 
 
-![Genre example classifications](image)
+![Genre Example Classifications](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Genre_Example1.PNG)
 
 You can easily see how the computer was very confident in all of its answers and got all of the genres correct. This is either an indicator of a well trained network or an overfitted network. 
 
-![Nationality example classifications](image)
+![Nationality Example Classifications](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/nationality%20examples.png)
 
 The computer was not as sure in these answers as it was in genres. The computer incorrectly guessed on genre probably because this Russian painting was not in the style of most other Russian paintings.
 
@@ -129,11 +129,11 @@ Only after testing it on images that it has not seen before will we be able to k
 
 Now we took paintings outside of our dataset to test the network. 
 
-![Genre Test Paintings](Image)
+![Genre Test Paintings](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Genre_Test.PNG)
 
 The network did not perform nearly as well as it had on the example classifications. Here, the computer incorrectly identified two of the three paintings. The first expressionist painting was in between surrealism and expressionism so it makes sense why the computer didn’t classify it correctly. The second painting, the computer was very unsure as to the style so it ended up also in surrealism. However, the third painting was a very distinct style of cubism which the computer confidently identified.
 
-![Nationality Test Paintings](Image)
+![Nationality Test Paintings](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Nationality_Test.PNG)
 We can easily see that the computer is very confident in selecting German paintings. However, it also correctly identified the French painting of Paris. It misidentified the Spanish painting as Russian, but at least it got the majority of our test paintings correct.
 
 
