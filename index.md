@@ -141,14 +141,16 @@ We can easily see that the computer is very confident in selecting German painti
 
 Looking forward, we have several objectives we want to improve this project on.
 
-Creating one multi-label classification network
+- Creating one multi-label classification network
 We plan to combine the two networks we have made into one. We want to assign two labels per image. We plan to do this by having all of the labels in one row and telling the computer that it has to pick the highest percentage out of the first half (genres) and the highest percentage out of the second half (nationalities). 
 
-Introducing more genres/nationalities
+- Introducing more genres/nationalities
 This will increase the versatility of the dataset. With more categories like Abstract Impressionism and Australian paintings, this network could prove to be more useful in more situations. 
 
-Getting a bigger dataset to reduce the problems with overfitting
+- Getting a bigger dataset to reduce the problems with overfitting
 Having more data is not guaranteed to solve our problem with overfitting, but it may help to relax the issue. Having a roughly equal amount of paintings in each genre/nationality will allow the computer to weigh all of them equally and not look into certain images more. This should reduce the issues we had with overfitting.
 
 # Acknowledgements
+
+We would first like to thank Supratim Haldar, whose Kaggle Notebook called DeepArtist was invaluable in helping us make our model, and helped teach us how many of the concepts behind many of the libraries he used with his helpful commentary on his notebook. We would also like to thank the website LearnDataScience, whose article on multi-label classification was invaluable in teaching us how it worked and the principles behind it. 
 
