@@ -1,5 +1,16 @@
 ## PHYS250: Machine Learning
 ### By Rahul Jakati & Alexander Miroshnichenko
+
+# Introduction
+
+"Wow, what a fine piece of impressionism!" You glance nervously at your watch, wondering how your friend convinced you to come to the art gallery. You have no idea how to tell the difference between a piece of surrealism and romanticism, much less post-impressionism! Enter the machine learning project Alex and I have been working on for the past week. We adapted a pre-trained neural network(s) to distuinguish paintings by nationality and genre. 
+
+As a general overview of this post
+
+1. Approach: A generalized summary of the concepts and data analysis which made up the model itself
+2. Results: An analysis of the results generated from our two neural networks
+3. Acknowledgements: People we would like to thank, as well as a link to the sources we have used
+
 # Approach
 
 Here we detail our approach towards the construction of our model, including the actual frameworks and datasets used, as well as some of the conceptual understanding behind them.
