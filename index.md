@@ -17,12 +17,15 @@ In our model we used the following datasets:
 - [NumPy](https://numpy.org/ "NumPy")
 ![NumPy](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Numpy.png)
 - [Seaborn](https://seaborn.pydata.org/ "Seaborn")
-![Seaborn](https://github.com/RahulJakati/Art-Classifier/blob/master/Images/seaborn.svg)
+![Seaborn](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Seaborn.png)
 
-Keras and Tensorflow are intertwined, two very popular libraries that contain the framework for the layers which made up our neural network.
-Pandas is a data manipulation library we used to assign labels to the images within our dataset
-Numpy is a mathematical library used to convert our images into tensors compatible as inputs into our model
-Seaborn is a graphing library similar to matplotlib, but with added visual effects and functions
+- Keras and Tensorflow are intertwined, two very popular libraries that contain the framework for the layers which made up our neural network.
+
+- Pandas is a data manipulation library we used to assign labels to the images within our dataset
+
+- Numpy is a mathematical library used to convert our images into tensors compatible as inputs into our model
+
+- Seaborn is a graphing library similar to matplotlib, but with added visual effects and functions, which we used to generate the connfusion matrix
 
 ### Data Processing
 
@@ -32,30 +35,33 @@ We sorted the image dataset by hand into their respective nationalities and genr
 
 Using the os.listdir command, we were able to check each label and make sure that they were assigned correctly.
 
-![Code showing os.listdir](Image)
+![Code showing os.listdir](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Os.list%20dir.png)
 
 A fundamental problem of many datasets is normalization, especially when some labels within a dataset are present at a much higher frequency than others. We accounted for this using class weights. A nationality which includes many paintings will have lower class weights assigned to each painting, and vice versa for say, genres with a low amount of paintings.
 
-![class weights shown](Image)
+![class weights shown](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Class%20Weights.png)
 
 ### Image Augmentation
 
 After processing the data, we wanted to introduce more pictures for the model to interpret, but without the hassle of scraping websites for painting data. We instead visually augmented the pictures we already had in various ways, including zooming in on a specific portion, mirroring, and even rotating the image. This massively increases the diversity of our dataset, and thus helps to prevent overfitting. 
 
-![augmentation example](Image)
+![augmentation example](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Augment%201.png)
 
 ### Resnet50
 
 The model used for this project was a pre-trained neural network called Res-Net 50, which had been previously trained over 14 million images from the dataset Imagenet.. This allows for the weights to be more easily transferred to paintings due to the concept of transfer learning. It also results in massively reduced computational times, as the model can pick up patterns much quicker than a fresh model, due to having encountered those features before as part of its Imagenet training. 
 
-![res-net 50 layer overview](Image)
+![res-net 50 layer overview](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Resnet_Layers.png)
 
 ### Model Parameters
 
-In a neural network, the outputs are typically a list of numbers that must be converted to percentages using an activation function. There are two main activation functions in deep learning, Softmax and Sigmoid, both of which are representations of logistic regression. The difference lies in that Softmax is generalized to multiple dimensions, which usually makes it ideal for taking multiple inputs and spitting out a single output. However, we found that changing our activation function to sigmoid significantly increased validation accuracy as well decreasing loss by a significant amount. This may be due to the fact that probabilities of a label within each node do not necessarily have to add up to one when using the sigmoid equation, meaning that each label is independent of each other. 
+In a neural network, the outputs are typically a list of numbers that must be converted to percentages using an activation function. There are two main activation functions in deep learning, Softmax and Sigmoid, both of which are representations of logistic regression. In fact, if you look at the image below, I doubt you would be able to tell the difference (The top image is sigmoid). The difference lies in that Softmax is generalized to multiple dimensions, which usually makes it ideal for taking multiple inputs and spitting out a single output. However, we found that changing our activation function to sigmoid significantly increased validation accuracy as well decreasing loss by a significant amount. This may be due to the fact that probabilities of a label within each node do not necessarily have to add up to one when using the sigmoid equation, meaning that each label is independent of each other.
 
-![sigmoid equation and graph](Image)
-![softmax equation and graph](Image)
+
+Another choice was our loss function. Due to the multi-class nature of the project, there are realistically only two possible options: Categorical Cross Entropy and Binary Cross Entropy. Binary Cross Entropy is typically used when there are more than one labels associated with each class, which was not the case in this project, despite our best efforts. In the future, we do want to run our model again, with categorical cross entropy instead.
+
+![sigmoid equation and graph](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/Sigmoid%20Function.png)
+![softmax equation and graph](https://raw.githubusercontent.com/RahulJakati/Art-Classifier/master/Images/softmax.png)
 
 # Results
 
